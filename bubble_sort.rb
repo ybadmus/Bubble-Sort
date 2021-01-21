@@ -4,12 +4,8 @@ def bubble_sort (arr)
     count_while = 0
     count_for = arr.length - 1
 
-    binding.pry
-
     while count_while < arr.length do
         swapped = false
-
-        binding.pry
 
         count_for.times do |i|
             if arr[i] > arr[i + 1]
@@ -17,8 +13,6 @@ def bubble_sort (arr)
                 swapped = true
             end
         end
-
-        binding.pry
 
         count_for -= 1
         count_while += 1
@@ -36,12 +30,8 @@ def bubble_sort_by (arr)
     count_while = 0
     count_for = arr.length - 1
 
-    binding.pry
-
     while count_while < arr.length do
         swapped = false
-
-        binding.pry
 
         count_for.times do |i|
             if yield(arr[i], arr[i + 1]).positive?
@@ -49,8 +39,6 @@ def bubble_sort_by (arr)
                 swapped = true
             end
         end
-
-        binding.pry
 
         count_for -= 1
         count_while += 1
