@@ -22,7 +22,7 @@ def bubble_sort (arr)
         end
     end
     
-    p arr
+    arr
 end
 
 
@@ -48,7 +48,7 @@ def bubble_sort_by (arr)
         end
     end
 
-    p arr
+    arr
 end
 
 bubble_sort([5, 6, 2, 3, 9, 1, 4, 7, 10, 8]);
