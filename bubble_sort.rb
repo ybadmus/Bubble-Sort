@@ -27,3 +27,29 @@ def bubble_sort (arr)
     
     p arr
 end
+
+
+def bubble_sort_by (arr)
+    count_while = 0
+    count_for = arr.length - 1
+
+    while count_while < arr.length do
+        swapped = false
+
+        count_for.times do |i|
+            if yield(arr[i], arr[i + 1]).positive?
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swapped = true
+            end
+        end
+
+        count_for -= 1
+        count_while += 1
+
+        unless swapped
+            break
+        end
+    end
+
+    p arr
+end
